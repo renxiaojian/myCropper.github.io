@@ -1,0 +1,293 @@
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+    visibility: visible;
+}
+.r-modal *{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+.close:hover {
+    color: #000;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+}
+.fade{
+    opacity: 0;
+    -webkit-transition: opacity .3s linear;
+    -moz-transition: opacity .3s linear;
+    -ms-transition: opacity .3s linear;
+    -o-transition: opacity .3s linear;
+    transition: opacity .3s linear;
+}
+.fade.in{
+    opacity: 1;
+    -webkit-transition: opacity .15s linear;
+    -moz-transition: opacity .15s linear;
+    -ms-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+.r-modal-bgmark.fade.in{
+    opacity: .5;
+    -webkit-transition: opacity .15s linear;
+    -moz-transition: opacity .15s linear;
+    -ms-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+.r-modal-dialog.in{
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s  ease-out;
+    -ms-transition: all .3s  ease-out;
+    -o-transition: all .3s  ease-out;
+    transition: all .3s  ease-out;
+}
+.r-modal{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1100;
+}
+.r-modal-bgmark{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,1);
+}
+.r-modal-dialog{
+    position: relative;
+    min-width: 448px;
+    width: auto;
+    margin: 10px;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s  ease-out;
+    -ms-transition: all .3s  ease-out;
+    -o-transition: all .3s  ease-out;
+    transition: all .3s  ease-out;
+    -webkit-transform: translate(0, -25%);
+    -moz-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    -o-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+}
+.r-modal-content{
+    position: relative;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+.r-modal-header{
+    min-height: 16px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.r-modal-tit{
+    margin: 0;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: normal;
+}
+.r-modal-body{
+    position: relative;
+    padding: 15px;
+}
+
+/*avatar*/
+.avatar-view {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.15);
+    cursor: pointer;
+    overflow: hidden;
+}
+.avatar-view canvas{
+    width: 100%;
+    height: 100%;
+}
+.avatar-view img {
+    width: 100%;
+}
+
+.avatar-body{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.avatar-upload {
+    overflow: hidden;
+}
+.avatar-upload label {
+    display: block;
+    float: left;
+    clear: left;
+    width: 100px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.avatar-upload input {
+    display: block;
+    margin-left: 110px;
+}
+.avatar-left,.avatar-right{
+    position: relative;
+    width: 100%;
+    float: none;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.avatar-wrapper {
+    height: 364px;
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.25);
+    background-color: #fcfcfc;
+    overflow: hidden;
+}
+.avatar-wrapper img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.avatar-preview {
+    float: left;
+    margin-top: 15px;
+    margin-right: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.avatar-preview:hover {
+    border-color: #ccf;
+    box-shadow: 0 0 5px rgba(0,0,0,.15);
+}
+
+.avatar-preview img {
+    width: 100%;
+}
+
+.preview-lg {
+    height: 184px;
+    width: 184px;
+    margin-top: 15px;
+}
+
+.preview-md {
+    height: 100px;
+    width: 100px;
+}
+
+.preview-sm {
+    height: 50px;
+    width: 50px;
+}
+.avatar-info{
+    padding: 10px 15px 0;
+    height: 30px;
+    line-height: 30px;
+    color: #d42f2f;
+}
+.avatar-ib{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.r-btn{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.r-btn-primary{
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.r-btn-primary:hover{
+    background-color: #286090;
+    border-color: #204d74;
+}
+@media (min-width: 768px){
+    .r-modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+    .r-modal-content{
+        -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        -moz-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    }
+}
+@media (min-width: 992px){
+    .r-modal-dialog {
+        width: 900px;
+    }
+    .avatar-left{
+        width: 75%;
+        float: left;
+    }
+    .avatar-right{
+        width: 25%;
+        float: left;
+    }
+    .avatar-preview {
+        float: none;
+    }
+}

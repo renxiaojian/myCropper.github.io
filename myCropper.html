@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图像剪裁上传</title>
+    <link rel="stylesheet" href="./dist/cropper.css">
+    <link rel="stylesheet" href="./dist/myCropper.css">
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .my-cropper{
+            background-color: black;
+            color: #ffffff;
+            width: 600px;
+            height: 300px;
+            margin: 0 auto 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="my-cropper">
+        <div class="avatar-view"></div>
+    </div>
+
+    <div class="r-modal fade" style="display: none;">
+        <div class="r-modal-bgmark fade"></div>
+        <div class="r-modal-dialog">
+            <div class="r-modal-content">
+                <div class="r-modal-header">
+                    <button class="close" type="button">×</button>
+                    <h4 class="r-modal-tit">Change Avatar 图片剪裁并上传</h4>
+                </div>
+                <div class="r-modal-body">
+                    <div class="avatar-body">
+                        <!-- Upload image and data -->
+                        <div class="avatar-upload">
+                            <input class="avatar-src" name="avatar_src" type="hidden">
+                            <input class="avatar-data" name="avatar_data" type="hidden">
+                            <label for="avatarInput">Local upload</label>
+                            <input class="avatar-input" id="avatarInput" name="avatar_file" type="file">
+                        </div>
+                        <!-- Crop and preview -->
+                        <div class="avatar-cp clearfix">
+                            <div class="avatar-left">
+                                <div class="avatar-wrapper">
+                                    <img src="" alt="">
+                                </div>
+                            </div>
+                            <div class="avatar-right">
+                                <div class="avatar-preview preview-lg"></div>
+                                <div class="avatar-preview preview-md"></div>
+                                <div class="avatar-preview preview-sm"></div>
+                            </div>
+                        </div>
+                        <!--info-->
+                        <div class="avatar-info"></div>
+                        <!--btn-->
+                        <div class="avatar-ib clearfix">
+                            <div class="avatar-left"></div>
+                            <div class="avatar-right">
+                                <button class="r-btn r-btn-primary avatar-up" id="upPicture" type="button">up picture</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="./dist/cropper.js"></script>
+    <script src="./dist/myCropper.js"></script>
+</body>
+</html>
